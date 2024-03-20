@@ -1,1 +1,102 @@
+html {
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
 
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.people {
+  --colomn-count: 2;
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(var(--colomn-count), min-content);
+  justify-content: center;
+
+  @media (min-width: 750px) {
+    --colomn-count: 3;
+  }
+
+  @media (min-width: 1000px) {
+    --colomn-count: 4;
+  }
+}
+
+.person {
+  width: 200px;
+  height: 231px;
+  padding: 10px 10px 20px;
+  border-radius: 12px;
+  transform: scale(1);
+  transition: transform 1s;
+}
+
+.photo>img{
+  border-radius: 50%;
+  width: 100%;
+}
+
+.photo {
+  position: relative;
+}
+
+.rank {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #8B0000;
+  text-align: center;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 700;
+
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: 600;
+  font-style: 20px;
+  line-height: 23px;
+  color: #2F4F4F;
+}
+
+.sport,
+.pay {
+  font-size: 18px;
+  line-height: 21px;
+  display: none;
+}
+
+.person:hover {
+  transform: scale(1.2);
+  background-color: #EEEEEE;
+
+  .photo img {
+    border-radius: 60px;
+  }
+
+  .sport,
+  .pay {
+    display: inline-block;
+  }
+
+
+}
