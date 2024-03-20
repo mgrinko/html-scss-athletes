@@ -20,7 +20,7 @@ html {
   box-sizing: border-box;
 
   display: grid;
-  grid-template: repeat(2, auto) / repeat(var(--grid-columns-qty), 200px);
+  grid-template: repeat(2, 1fr) / repeat(var(--grid-columns-qty), 200px);
   grid-auto-rows: 1fr;
   justify-content: center;
 
@@ -52,6 +52,7 @@ html {
 }
 
 .person:hover {
+  position: relative;
   background-color: #eeeeee;
   transform: scale(120%);
 
