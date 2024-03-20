@@ -39,8 +39,9 @@ a {
 }
 
 .photo>img{
-  border-radius: 50%;
+  border-radius: 120px;
   width: 100%;
+  transition: border-radius 1s;
 }
 
 .photo {
@@ -97,6 +98,15 @@ a {
   .pay {
     display: inline-block;
   }
+}
+.pay::before {
+  content: '$';
+}
 
+.pay::after {
+  content: 'M';
+}
 
+.sport::after {
+  content: ',';
 }
