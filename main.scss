@@ -1,1 +1,133 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+.people {
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 220px;
+  height: 287px;
+  padding: 35px 30px 155px;
+  --column-count:2;
+
+  display: grid;
+  justify-content: center;
+  gap: 40px 30px;
+  grid-template-columns: repeat(var(--column-count), 1fr);
+  
+  @media (min-width: 1000px) {
+    --column-count:4;
+  }
+
+  .person{
+    position: relative;
+    
+    background-color: transparent;
+    padding: 10px 10px;
+    margin: 0 auto;
+    transition: 1s;
+  
+    .photo{
+      
+      &__image{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        transition: border-radius 1s;
+      }
+  
+      .rank{
+        position: absolute;
+        top: 88px;
+        left: 168px;
+  
+        color: #8B0000;
+  
+        font-family: Arial;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        text-align: center;
+  
+        height: 32px;
+        width: 32px;
+  
+        background-color: #fff;
+        border-radius: 100px;
+      }
+    }
+    
+    .details{
+      
+      .name{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+  
+        font-size: 24px;
+        line-height: 23px;
+  
+        color: #2F4F4F;
+  
+        margin-bottom: 8px;
+      }
+  
+      .extra{
+        text-align: center;
+        opacity: 0;
+        
+        .sport{
+          color:#000;
+  
+          &::after{
+            content: ',';
+          }
+        }
+        
+        .pay{
+          color:#000;
+  
+          &::before{
+            content: '$';
+          }
+  
+          &::after{
+            content: 'M';
+          }
+        }
+      }
+  
+    }
+  
+    &:hover {
+      background-color: #eee;
+      border-radius: 5px;
+      transform: scale(1.2);
+    }
+
+    &:hover .photo__image{
+      border-radius: 60px;
+    }
+
+    &:hover .extra{
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+
+
 
