@@ -35,9 +35,10 @@ a{
     background-color: transparent;
     padding: 10px 10px;
     margin: 0 auto;
+    transition: 1s;
   
     .photo{
-    
+      
       &__image{
         width: 200px;
         height: 200px;
@@ -48,7 +49,7 @@ a{
       .rank{
         position: absolute;
         top: 88px;
-        left: 165px;
+        left: 168px;
   
         color: #8B0000;
   
