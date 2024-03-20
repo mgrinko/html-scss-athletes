@@ -13,20 +13,22 @@ a {
 }
 
 .people {
-  --colomn-count: 2;
+  --card-width: 220px;
   padding: 20px;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(var(--colomn-count), min-content);
+  max-width: 1000px;
+  grid-template-columns: repeat(auto-fill, var(--card-width));
   justify-content: center;
+  margin: 0 auto;
 
-  @media (min-width: 750px) {
-    --colomn-count: 3;
-  }
+  // @media (min-width: 750px) {
+  //   --colomn-count: 3;
+  // }
 
-  @media (min-width: 1000px) {
-    --colomn-count: 4;
-  }
+  // @media (min-width: 1000px) {
+  //   --colomn-count: 4;
+  // }
 }
 
 .person {
